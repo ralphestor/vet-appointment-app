@@ -53,12 +53,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`stroke-white hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Home"
                 ? "border-r-[4px] border-customOrange text-customOrange stroke-customOrange"
-                : "text-white"
+                : "text-white stroke-white"
             } ${sidebarLink === "Home" ? "text-[#FF630B]" : "text-white"}`}
             onClick={() => {
               setSidebarLink("Home");
@@ -79,12 +79,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Appointments"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Appointments");
@@ -105,12 +105,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Messages"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Messages");
@@ -131,12 +131,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Contacts"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Contacts");
@@ -157,12 +157,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Data"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Data");
@@ -183,12 +183,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`stroke-white hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Subscription"
                 ? "border-r-[4px] border-customOrange text-customOrange stroke-customOrange"
-                : "text-white"
+                : "text-white stroke-white"
             }`}
             onClick={() => {
               setSidebarLink("Subscription");
@@ -209,12 +209,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Help"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Help");
@@ -235,12 +235,12 @@ const Sidebar = () => {
         <li>
           <a
             href="#"
-            className={`fill-white hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
+            className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
               isMinimized && "justify-center"
             } ${
               sidebarLink === "Settings"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
-                : "text-white"
+                : "text-white fill-white"
             }`}
             onClick={() => {
               setSidebarLink("Settings");
