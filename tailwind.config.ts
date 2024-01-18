@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         'customOrange': '#FF630B',
       },
+      gridTemplateColumns: {
+        'headerDesktop': 'auto max-content',
+      }
     },
   },
   plugins: [],

@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+
 import IconLogo from "../../public/icons/sidebar/icon-logo";
 import IconHome from "../../public/icons/sidebar/icon-home";
 import IconCalendar from "../../public/icons/sidebar/icon-calendar";
@@ -13,27 +15,33 @@ import IconSettings from "../../public/icons/sidebar/icon-settings";
 import IconDoubleChevronRight from "../../public/icons/sidebar/icon-doublechevronright";
 import IconDoubleChevronLeft from "../../public/icons/sidebar/icon-doublechevronleft";
 
-const Sidebar = () => {
-  const [sidebarLink, setSidebarLink] = useState("Home");
+interface SidebarProps {
+  isOpen: Boolean;
+}
+
+const Sidebar = ({isOpen}:SidebarProps) => {
+  const { isExpand, toggleExpand} = useContext(ThemeContext);
+  const [sidebarLink, setSidebarLink] = useState("Appointments");
   const [isMinimized, setIsMinimized] = useState(false);
 
   return (
     <aside
-      className={`relative flex flex-col bg-[#1C1C1E] h-[100vh] min-h-[800px] transition-all duration-300 ease-in-out ${
-        isMinimized === true ? "w-[120px] min-w-[120px]" : "w-[240px] min-w-[240px]"
+      className={`${isOpen && "hidden"} lg:block z-[9999] flex fixed flex-col bg-[#1C1C1E] h-[100vh] min-h-[700px] transition-all duration-300 ease-in-out min-w-[700px] w-[100vw] ${
+        isMinimized === true ? "lg:w-[120px] lg:min-w-[120px]" : "lg:w-[240px] lg:min-w-[240px]"
       }`}
     >
-      <div className="absolute right-[-18px] top-[50%]">
+      <div className="hidden lg:block absolute right-[-18px] top-[50%]">
         <button
           className="flex justify-center items-center w-[36px] h-[36px] bg-[#333334] rounded-[8px] hover:bg-customOrange transition-all duration-300 ease-in-out z-[99999]"
           onClick={() => {
             setIsMinimized(!isMinimized);
+            toggleExpand(isMinimized);
           }}
         >
           {isMinimized ? <IconDoubleChevronRight /> : <IconDoubleChevronLeft />}
         </button>
       </div>
-      <div className="py-[40px] border-b-[1px] border-white border-opacity-20">
+      <div className="hidden lg:flex items-center justify-center min-h-[115px] border-b-[1px] border-white border-opacity-20">
         <a href="/" className="flex justify-center items-center">
           <div>
             <IconLogo width={37} height={36} color="#FF630B" />
@@ -49,12 +57,12 @@ const Sidebar = () => {
           </div>
         </a>
       </div>
-      <ul className="h-full w-full py-[40px]">
+      <ul className="h-full w-full pt-[100px] lg:pt-0 py-[40px]">
         <li>
           <a
             href="#"
             className={`hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Home"
                 ? "border-r-[4px] border-customOrange text-customOrange stroke-customOrange"
@@ -64,12 +72,12 @@ const Sidebar = () => {
               setSidebarLink("Home");
             }}
           >
-            <div className={``}>
+            <div>
               <IconHome />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px] ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Home
@@ -80,7 +88,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Appointments"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -94,8 +102,8 @@ const Sidebar = () => {
               <IconCalendar />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px]  ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Appointments
@@ -106,7 +114,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Messages"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -120,8 +128,8 @@ const Sidebar = () => {
               <IconMail />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px]  ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Messages
@@ -132,7 +140,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Contacts"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -146,8 +154,8 @@ const Sidebar = () => {
               <IconSmiley />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px]  ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Contacts
@@ -158,7 +166,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Data"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -172,8 +180,8 @@ const Sidebar = () => {
               <IconData />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px] ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Data Analytics
@@ -184,7 +192,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:stroke-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Subscription"
                 ? "border-r-[4px] border-customOrange text-customOrange stroke-customOrange"
@@ -198,8 +206,8 @@ const Sidebar = () => {
               <IconSubscribe />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px] ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Subscription
@@ -210,7 +218,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Help"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -224,8 +232,8 @@ const Sidebar = () => {
               <IconHelp />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px] ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Help Center
@@ -236,7 +244,7 @@ const Sidebar = () => {
           <a
             href="#"
             className={`hover:fill-customOrange flex flex-row gap-[12px] items-center sidebar-link py-[20px] px-[20px] transition-all duration-300 ease-in-out hover:bg-[#272729] hover:text-[#FF630B] ${
-              isMinimized && "justify-center"
+              isMinimized && "lg:justify-center"
             } ${
               sidebarLink === "Settings"
                 ? "border-r-[4px] border-customOrange text-customOrange fill-customOrange"
@@ -250,8 +258,8 @@ const Sidebar = () => {
               <IconSettings />
             </div>
             <span
-              className={`w-fit absolute transition-[transform,opacity]  ${
-                isMinimized ? "opacity-0 translate-x-[-30px]" : "opacity-100 translate-x-[30px]"
+              className={`w-fit absolute transition-[transform,opacity] translate-x-[30px] ${
+                isMinimized ? "lg:opacity-0 lg:translate-x-[-60px]" : "lg:opacity-100 lg:translate-x-[30px]"
               }`}
             >
               Settings
@@ -259,7 +267,7 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-      <div className="flex flex-col justify-center items-center mx-[10px] py-[40px] border-t-[1px] border-white border-opacity-20 gap-[12px]">
+      <div className="hidden lg:flex flex-col justify-center items-center mx-[10px] py-[40px] border-t-[1px] border-white border-opacity-20 gap-[12px]">
         <div>
           <IconLogo width={20} height={20} color="#FF630B" />
         </div>

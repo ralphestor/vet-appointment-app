@@ -1,0 +1,67 @@
+[
+    {
+      "id": "87e16573-94b7-4479-af04-29bf7a03124d",
+      "title": "Meeting",
+      "purpose": "Meeting",
+      "date": "June 6, 2023",
+      "time_start": "8:00 AM",
+      "time_end": "9:30 PM",
+      "client": {
+        "name": "Chrissie Lee",
+        "email": "chrissielee@gmail.com",
+        "phone": "+01 234 567 8910",
+        "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+        "image": ""
+      },
+      "clinic": {
+        "name": "Silvervale Towers",
+        "city": "Los Angeles",
+        "email": "branch1@gmail.com",
+        "phone": "+01 234 567 8910",
+        "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+        "image": ""
+      },
+      "pet": {
+        "name": "Brownie",
+        "type": "Dog",
+        "breed": "French Bulldog",
+        "sex": "Male",
+        "age": "10 months",
+        "birthday": "January 12, 2023",
+        "image": ""
+      }
+    },
+    {
+        "id": "bbb616a0-7269-49a6-963a-03509a6a9b6a",
+        "title": "Brownie's Vaccination",
+        "purpose": "Vaccination",
+        "date": "June 6, 2023",
+        "time_start": "8:00 AM",
+        "time_end": "9:30 PM",
+        "client": {
+          "name": "Chrissie Lee",
+          "email": "chrissielee@gmail.com",
+          "phone": "+01 234 567 8910",
+          "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+          "image": ""
+        },
+        "clinic": {
+          "name": "Silvervale Towers",
+          "city": "Los Angeles",
+          "email": "branch1@gmail.com",
+          "phone": "+01 234 567 8910",
+          "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+          "image": ""
+        },
+        "pet": {
+          "name": "Brownie",
+          "type": "Dog",
+          "breed": "French Bulldog",
+          "sex": "Male",
+          "age": "10 months",
+          "birthday": "January 12, 2023",
+          "image": ""
+        }
+      }
+  ]
+  
