@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <article className="relative w-full">
+      <article className="relative w-full lg:w-[calc(100%-400px)]">
         <section
           className={`relative w-[100%] flex flex-col mt-[280px] sm:mt-[230px] lg:mt-[116px] transition-all duration-300 ease-in-out ml-0 ${
             isExpand ? "lg:ml-[240px]" : "lg:ml-[120px]"
