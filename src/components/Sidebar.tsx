@@ -26,7 +26,7 @@ const Sidebar = ({isOpen}:SidebarProps) => {
 
   return (
     <aside
-      className={`${isOpen && "hidden"} lg:block z-[9999] flex fixed flex-col bg-[#1C1C1E] h-[100vh] min-h-[700px] transition-all duration-300 ease-in-out min-w-[700px] w-[100vw] ${
+      className={`${!isOpen && "hidden"} lg:block z-[9999] flex fixed flex-col bg-[#1C1C1E] h-[100vh] min-h-[700px] transition-all duration-300 ease-in-out min-w-[700px] w-[100vw] ${
         isMinimized === true ? "lg:w-[120px] lg:min-w-[120px]" : "lg:w-[240px] lg:min-w-[240px]"
       }`}
     >

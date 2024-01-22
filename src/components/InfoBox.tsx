@@ -120,7 +120,7 @@ const InfoBox = () => {
       </div>
       <div className="flex flex-col gap-[20px] px-[40px] py-[20px] border-l border-b border-[#D8D3CC]">
         <button className="rounded-[12px] bg-[#ff630b] px-[20px] py-[12px] text-white hover:bg-[#FFE0CE] hover:text-[#ff630b] transition-all duration-300 ease-in-out font-[500]">
-          New Appointment
+          Reschedule Appointment
         </button>
         <button className="border border-[#D8D3CC] rounded-[12px] bg-[#FFF] px-[20px] py-[12px] text-[#9D9C9C] hover:text-[#ff630b] hover:border-customOrange transition-all duration-300 ease-in-out font-[500]">
           Cancel Appointment

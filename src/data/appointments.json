@@ -1,67 +1,177 @@
 [
-    {
-      "id": "87e16573-94b7-4479-af04-29bf7a03124d",
-      "title": "Meeting",
-      "purpose": "Meeting",
-      "date": "June 6, 2023",
-      "time_start": "8:00 AM",
-      "time_end": "9:30 PM",
-      "client": {
-        "name": "Chrissie Lee",
-        "email": "chrissielee@gmail.com",
-        "phone": "+01 234 567 8910",
-        "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
-        "image": ""
-      },
-      "clinic": {
-        "name": "Silvervale Towers",
-        "city": "Los Angeles",
-        "email": "branch1@gmail.com",
-        "phone": "+01 234 567 8910",
-        "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
-        "image": ""
-      },
-      "pet": {
-        "name": "Brownie",
-        "type": "Dog",
-        "breed": "French Bulldog",
-        "sex": "Male",
-        "age": "10 months",
-        "birthday": "January 12, 2023",
-        "image": ""
-      }
+  {
+    "id": "87e16573-94b7-4479-af04-29bf7a03124d",
+    "title": "Meeting with Chrissie",
+    "purpose": "consult",
+    "date": "January 21, 2024",
+    "time_start_hr": 8,
+    "time_start_min": 0,
+    "time_end_hr": 9,
+    "time_end_min": 30,
+    "vet_id": "b0066710-d230-4e29-9d61-ee627c911d61",
+    "client": {
+      "name": "Chrissie Lee",
+      "email": "chrissielee@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "imageUrl": ""
     },
-    {
-        "id": "bbb616a0-7269-49a6-963a-03509a6a9b6a",
-        "title": "Brownie's Vaccination",
-        "purpose": "Vaccination",
-        "date": "June 6, 2023",
-        "time_start": "8:00 AM",
-        "time_end": "9:30 PM",
-        "client": {
-          "name": "Chrissie Lee",
-          "email": "chrissielee@gmail.com",
-          "phone": "+01 234 567 8910",
-          "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
-          "image": ""
-        },
-        "clinic": {
-          "name": "Silvervale Towers",
-          "city": "Los Angeles",
-          "email": "branch1@gmail.com",
-          "phone": "+01 234 567 8910",
-          "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
-          "image": ""
-        },
-        "pet": {
-          "name": "Brownie",
-          "type": "Dog",
-          "breed": "French Bulldog",
-          "sex": "Male",
-          "age": "10 months",
-          "birthday": "January 12, 2023",
-          "image": ""
-        }
-      }
-  ]
-  
+    "clinic": {
+      "name": "Green Bow Vett",
+      "city": "Los Angeles",
+      "email": "branch1@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+      "imageUrl": ""
+    },
+    "pet": {
+      "name": "Doggy",
+      "type": "Dog",
+      "breed": "French Bulldog",
+      "sex": "Male",
+      "age": "10 months",
+      "birthday": "January 12, 2023",
+      "imageUrl": ""
+    }
+  },
+  {
+    "id": "bbb616a0-7269-49a6-963a-03509a6a9b6a",
+    "title": "Brownie's Vaccination",
+    "purpose": "vaccine",
+    "date": "January 21, 2024",
+    "time_start_hr": 10,
+    "time_start_min": 0,
+    "time_end_hr": 13,
+    "time_end_min": 0,
+    "vet_id": "77afcad5-1c5d-4c13-b279-71bda2b7f329",
+    "client": {
+      "name": "Janice Lee",
+      "email": "janicelee@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "imageUrl": ""
+    },
+    "clinic": {
+      "name": "Green Bow Vett",
+      "city": "Los Angeles",
+      "email": "branch1@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+      "imageUrl": ""
+    },
+    "pet": {
+      "name": "Brownie",
+      "type": "Dog",
+      "breed": "French Bulldog",
+      "sex": "Male",
+      "age": "10 months",
+      "birthday": "January 12, 2023",
+      "imageUrl": ""
+    }
+  },
+  {
+    "id": "eeda5d72-807f-4885-b7a4-1f45cece66bc",
+    "title": "Client Meeting",
+    "purpose": "consult",
+    "date": "January 22, 2024",
+    "time_start_hr": 7,
+    "time_start_min": 0,
+    "time_end_hr": 11,
+    "time_end_min": 30,
+    "vet_id": "cef84a40-a573-4551-8dc5-7fdcea965b02",
+    "client": {
+      "name": "Ja Morant",
+      "email": "jamorant@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "imageUrl": ""
+    },
+    "clinic": {
+      "name": "Green Bow Vett",
+      "city": "Los Angeles",
+      "email": "branch1@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+      "imageUrl": ""
+    },
+    "pet": {
+      "name": "Blackie",
+      "type": "Dog",
+      "breed": "Labrador",
+      "sex": "Male",
+      "age": "10 months",
+      "birthday": "January 12, 2023",
+      "imageUrl": ""
+    }
+  },
+  {
+    "id": "152d3cbb-7599-4340-9f1b-cb7d4f60fcc6",
+    "title": "Chopper's Vaccination",
+    "purpose": "vaccine",
+    "date": "January 22, 2024",
+    "time_start_hr": 13,
+    "time_start_min": 0,
+    "time_end_hr": 18,
+    "time_end_min": 0,
+    "vet_id": "c98c45c2-b7b1-4c38-8e2e-4f3fe39158bb",
+    "client": {
+      "name": "Monkey D. Luffy",
+      "email": "chrissielee@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "imageUrl": ""
+    },
+    "clinic": {
+      "name": "Green Bow Vett",
+      "city": "Los Angeles",
+      "email": "branch1@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+      "imageUrl": ""
+    },
+    "pet": {
+      "name": "Chopper",
+      "type": "Dog",
+      "breed": "Golden Retriever",
+      "sex": "Male",
+      "age": "10 months",
+      "birthday": "January 12, 2023",
+      "imageUrl": ""
+    }
+  },
+  {
+    "id": "d25bef7a-82a9-4a8f-a49c-1ebaba206cc7",
+    "title": "Kitty's Vaccination",
+    "purpose": "vaccine",
+    "date": "January 23, 2024",
+    "time_start_hr": 10,
+    "time_start_min": 0,
+    "time_end_hr": 13,
+    "time_end_min": 0,
+    "vet_id": "c98c45c2-b7b1-4c38-8e2e-4f3fe39158bb",
+    "client": {
+      "name": "Jackie Chan",
+      "email": "chrissielee@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "imageUrl": ""
+    },
+    "clinic": {
+      "name": "Green Bow Vett",
+      "city": "Los Angeles",
+      "email": "branch1@gmail.com",
+      "phone": "+01 234 567 8910",
+      "address": "4th Floor, RM 402, Blk 2, 13 Johnson Street, Silvervale Towers, Los Angeles, California",
+      "imageUrl": ""
+    },
+    "pet": {
+      "name": "Kitty",
+      "type": "cat",
+      "breed": "Persian",
+      "sex": "Male",
+      "age": "10 months",
+      "birthday": "January 12, 2023",
+      "imageUrl": ""
+    }
+  }
+]

@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col sm:flex-row gap-[12px] justify-between lg:justify-center items-center w-full pr-[40px] pl-[40px] lg:pl-0">
           <div>
-            <button className="flex flex-row gap-[12px] justify-center items-center text-[#1C1C1E] hover:text-customOrange hover:stroke-customOrange hover:fill-customOrange transition-all duration-300 ease-in-out">
+            <button className="group flex flex-row gap-[12px] justify-center items-center text-[#1C1C1E] hover:text-customOrange hover:stroke-customOrange hover:fill-customOrange transition-all duration-300 ease-in-out">
               <div>
                 <Image
                   src="/images/avatar.png"
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row justify-center items-center gap-[4px]">
                 <div className="w-full">
-                  <span className="w-full text-[#1C1C1E] font-[600]">
+                  <span className="w-full text-[#1C1C1E] font-[600] group-hover:text-customOrange transition-all duration-300 ease-in-out">
                     Jane Dee
                   </span>
                 </div>
