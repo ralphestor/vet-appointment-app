@@ -30,9 +30,9 @@ const Sidebar = ({isOpen}:SidebarProps) => {
         isMinimized === true ? "lg:w-[120px] lg:min-w-[120px]" : "lg:w-[240px] lg:min-w-[240px]"
       }`}
     >
-      <div className="hidden lg:block absolute right-[-18px] top-[50%]">
+      <div className="hidden lg:block absolute right-[-18px] top-[50%] translate-y-[-50%]">
         <button
-          className="flex justify-center items-center w-[36px] h-[36px] bg-[#333334] rounded-[8px] hover:bg-customOrange transition-all duration-300 ease-in-out z-[99999]"
+          className="fill-white flex justify-center items-center w-[36px] h-[36px] bg-[#333334] rounded-[8px] hover:bg-customOrange transition-all duration-300 ease-in-out z-[99999]"
           onClick={() => {
             setIsMinimized(!isMinimized);
             toggleExpand(isMinimized);

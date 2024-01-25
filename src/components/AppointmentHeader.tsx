@@ -1,7 +1,11 @@
+import React, { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+
 import AppIconLeftChevron from "../../public/icons/app/icon-leftchevron";
 import AppIconRightChevron from "../../public/icons/app/icon-rightchevron";
 
 const AppointmentHeader = () => {
+  const { setIsFormOpen } = useContext(ThemeContext);
   return (
     <div className="flex flex-col lg:flex-row gap-[12px] lg:gap-0 justify-between items-center px-[40px] py-[20px]">
       <div className="flex flex-col gap-[12px] items-center lg:items-start">
@@ -36,7 +40,7 @@ const AppointmentHeader = () => {
         </div>
       </div>
       <div>
-        <button className="rounded-[12px] bg-[#ff630b] px-[20px] py-[12px] text-white hover:bg-[#FFE0CE] hover:text-[#ff630b] transition-all duration-300 ease-in-out font-[500]">
+        <button className="rounded-[12px] bg-[#ff630b] px-[20px] py-[12px] text-white hover:bg-[#FFE0CE] hover:text-[#ff630b] transition-all duration-300 ease-in-out font-[500]" onClick={() => setIsFormOpen(true)}>
           New Appointment
         </button>
       </div>

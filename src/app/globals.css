@@ -110,7 +110,6 @@ body {
 }
 
 .consult-icon {
-  border-radius: 36px;
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.8) 0%,
@@ -118,7 +117,6 @@ body {
     ),
     #9747ff;
   display: flex;
-  padding: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -135,7 +133,6 @@ body {
 }
 
 .vaccine-icon {
-  border-radius: 36px;
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.8) 0%,
@@ -143,7 +140,6 @@ body {
     ),
     #ff9447;
   display: flex;
-  padding: 10px;
   justify-content: center;
   align-items: center;
 }

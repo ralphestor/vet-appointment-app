@@ -12,7 +12,7 @@
     "client": {
       "name": "Chrissie Lee",
       "email": "chrissielee@gmail.com",
-      "phone": "+01 234 567 8910",
+      "phone": "+01 234 567 1111",
       "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
       "imageUrl": ""
     },
@@ -47,8 +47,8 @@
     "client": {
       "name": "Janice Lee",
       "email": "janicelee@gmail.com",
-      "phone": "+01 234 567 8910",
-      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "phone": "+01 234 567 2222",
+      "address": "2nd Avenue, Golden Street, Springville Village, San Diego, California",
       "imageUrl": ""
     },
     "clinic": {
@@ -82,8 +82,8 @@
     "client": {
       "name": "Ja Morant",
       "email": "jamorant@gmail.com",
-      "phone": "+01 234 567 8910",
-      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "phone": "+01 234 567 3333",
+      "address": "3rd Avenue, Golden Street, Springville Village, San Diego, California",
       "imageUrl": ""
     },
     "clinic": {
@@ -116,9 +116,9 @@
     "vet_id": "c98c45c2-b7b1-4c38-8e2e-4f3fe39158bb",
     "client": {
       "name": "Monkey D. Luffy",
-      "email": "chrissielee@gmail.com",
-      "phone": "+01 234 567 8910",
-      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "email": "luffy@gmail.com",
+      "phone": "+01 234 567 4444",
+      "address": "4th Avenue, Golden Street, Springville Village, San Diego, California",
       "imageUrl": ""
     },
     "clinic": {
@@ -151,9 +151,9 @@
     "vet_id": "c98c45c2-b7b1-4c38-8e2e-4f3fe39158bb",
     "client": {
       "name": "Jackie Chan",
-      "email": "chrissielee@gmail.com",
-      "phone": "+01 234 567 8910",
-      "address": "1st Avenue, Golden Street, Springville Village, San Diego, California",
+      "email": "jackiechan@gmail.com",
+      "phone": "+01 234 567 5555",
+      "address": "5th Avenue, Golden Street, Springville Village, San Diego, California",
       "imageUrl": ""
     },
     "clinic": {
@@ -166,7 +166,7 @@
     },
     "pet": {
       "name": "Kitty",
-      "type": "cat",
+      "type": "Cat",
       "breed": "Persian",
       "sex": "Male",
       "age": "10 months",

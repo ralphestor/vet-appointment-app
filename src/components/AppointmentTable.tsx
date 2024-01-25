@@ -1,23 +1,32 @@
+import React, { useState, useContext, ChangeEvent } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+
 import AppointmentList from "./AppointmentList";
+import vetData from "@/data/veterinary.json";
 
 const AppointmentTable = () => {
+  const { setData, selectedVet, setSelectedVet } = useContext(ThemeContext);
+
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedVet(event.target.value);
+  };
+
   return (
     <table className="border-t border-[#D8D3CC]">
       <thead className="border-b border-[#D8D3CC]">
         <tr>
           <th className="flex flex-col sm:flex-row justify-center items-center gap-[4px] py-[20px] table-header">
             <h1>Schedule board for:</h1>
-            <select className="border border-[#D8D3CC] rounded-[4px] px-[10px]">
-              <option>Select Vet Name</option>
-              <option>Anika Perry</option>
-              <option>Danica Jane</option>
-              <option>John Fins</option>
-              <option>Lebron James</option>
+            <select className="border border-[#D8D3CC] rounded-[4px] px-[10px]" onChange={handleSelectChange} defaultValue={selectedVet}>
+              <option value="">Select Vet Name</option>
+              {vetData.map((vet) => {
+                return <option key={vet.vet_id} id={vet.vet_id} value={vet.vet_id}>{vet.veterinary_name}</option>;
+              })}
             </select>
           </th>
         </tr>
       </thead>
-      <tbody >
+      <tbody>
         <tr className="border-b border-[#D8D3CC] grid grid-cols-[140px,auto]">
           <th className="border-r border-[#D8D3CC] h-[99px] flex items-center justify-center table-header">
             12:00 AM

@@ -13,13 +13,18 @@ import AppIconLogout from "../../public/icons/app/icon-logout";
 import AppointmentHeader from "@/components/AppointmentHeader";
 import AppointmentTable from "@/components/AppointmentTable";
 import InfoBox from "@/components/InfoBox";
+import AppointmentForm from "@/components/AppointmentForm";
 
 export default function Home() {
-  const { isExpand } = useContext(ThemeContext);
+  const { isExpand, isInfoOpen, isFormOpen } = useContext(ThemeContext);
   return (
-    <main className={`relative w-[calc(100vw-17px)] ${
-      isExpand ? "lg:w-[calc(100vw-240px-17px)]" : "lg:w-[calc(100vw-120px-17px)]"
-    }`}>
+    <main
+      className={`relative w-[calc(100vw-17px)] ${
+        isExpand
+          ? "lg:w-[calc(100vw-240px-17px)]"
+          : "lg:w-[calc(100vw-120px-17px)]"
+      }`}
+    >
       <header
         className={`bg-white w-full ${
           isExpand ? "lg:w-[calc(100vw-240px)]" : "lg:w-[calc(100vw-120px)]"
@@ -28,7 +33,7 @@ export default function Home() {
         <div className="w-full px-[40px]">
           <SearchBar />
         </div>
-        <div className="flex flex-col sm:flex-row gap-[12px] justify-between lg:justify-center items-center w-full pr-[40px] pl-[40px] lg:pl-0">
+        <div className="flex flex-col sm:flex-row gap-[12px] justify-between lg:justify-center items-center w-full pr-[40px] lg:pr-0 pl-[40px] lg:pl-0">
           <div>
             <button className="group flex flex-row gap-[12px] justify-center items-center text-[#1C1C1E] hover:text-customOrange hover:stroke-customOrange hover:fill-customOrange transition-all duration-300 ease-in-out">
               <div>
@@ -71,23 +76,33 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <article className="relative w-full lg:w-[calc(100%-400px)]">
-        <section
-          className={`relative w-[100%] flex flex-col mt-[280px] sm:mt-[230px] lg:mt-[116px] transition-all duration-300 ease-in-out ml-0 ${
-            isExpand ? "lg:ml-[240px]" : "lg:ml-[120px]"
-          } `}
+      {isFormOpen ? (
+        <article className={`w-full lg:w-[calc(100vw-17px)]`}>
+          <AppointmentForm />
+        </article>
+      ) : (
+        <article
+          className={`w-full ${
+            !isInfoOpen && "lg:w-full"
+          } lg:w-[calc(100%-400px)]`}
         >
-          <>
-            <AppointmentHeader />
-          </>
-          <>
-            <AppointmentTable />
-          </>
-        </section>
-        <section>
-          <InfoBox />
-        </section>
-      </article>
+          <section
+            className={`w-[100%] flex flex-col mt-[280px] sm:mt-[230px] lg:mt-[116px] transition-all duration-300 ease-in-out ml-0 ${
+              isExpand ? "lg:ml-[240px]" : "lg:ml-[120px]"
+            } `}
+          >
+            <>
+              <AppointmentHeader />
+            </>
+            <>
+              <AppointmentTable />
+            </>
+          </section>
+          <section>
+            <InfoBox />
+          </section>
+        </article>
+      )}
     </main>
   );
 }

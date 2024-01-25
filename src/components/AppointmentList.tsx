@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 import Appointment from "./Appointment";
 import appointmentData from "@/data/appointments.json";
 
@@ -45,17 +46,22 @@ interface AppointmentData {
 }
 
 const AppointmentList = () => {
-  const [data, setData] = useState<AppointmentData[]>(appointmentData || []);
+  const { data, setData, selectedVet } = useContext(ThemeContext);
 
   useEffect(() => {
-    console.log(data);
-  }, []);
+    setData(appointmentData)
+  }, [setData]);
+
+  useEffect(() => {
+    console.log(data.filter((appointment: AppointmentData) => appointment.vet_id === selectedVet))
+  }, [selectedVet]);
 
   return (
     <div>
-      {data.map((appointment) => (
+      {data.filter((appointment: AppointmentData) => appointment.vet_id === selectedVet).map((appointment:AppointmentData) => (
         <Appointment
           key={appointment.id}
+          id={appointment.id}
           title={appointment.title}
           type={appointment.purpose}
           timeStartHr={
